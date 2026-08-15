@@ -87,7 +87,7 @@
       color: #fbbf24;
     }
 
-    /* Hero Section with Madinah Islamic Background */
+    /* Hero Section */
     .hero {
       background: linear-gradient(
           rgba(6, 78, 59, 0.88), 
@@ -331,7 +331,7 @@
       font-weight: 500;
     }
 
-    /* Leaderboard Table */
+    /* Leaderboard Table (Points Table) */
     .table-container {
       overflow-x: auto;
       border-radius: 12px;
@@ -345,7 +345,7 @@
     }
 
     .styled-table th, .styled-table td {
-      padding: 1rem 1.25rem;
+      padding: 1.1rem 1.4rem;
       border-bottom: 1px solid var(--border);
     }
 
@@ -355,19 +355,18 @@
       font-weight: 700;
       font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
 
     .rank-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       font-weight: 800;
-      font-size: 0.9rem;
-      background: #e2e8f0;
+      font-size: 0.95rem;
     }
 
     .rank-1 .rank-badge { background: #fef08a; color: #854d0e; }
@@ -375,17 +374,24 @@
     .rank-3 .rank-badge { background: #ffedd5; color: #9a3412; }
 
     .team-name {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 700;
+      color: var(--dark);
+    }
+
+    .team-code-badge {
+      font-weight: 600;
+      color: #64748b;
+      font-size: 0.95rem;
     }
 
     .points {
       font-weight: 800;
-      color: var(--primary);
-      font-size: 1.25rem;
+      color: #064e3b;
+      font-size: 1.35rem;
     }
 
-    /* Student & Team Directory */
+    /* Student Directory */
     .search-container {
       max-width: 550px;
       margin: 0 auto 2rem auto;
@@ -556,7 +562,7 @@
         <div class="schedule-card" data-day="day1">
           <div class="time-tag"><i class="fa-solid fa-clock"></i> 11:30 AM | Stage 2</div>
           <h3>Islamic Quiz Prelims</h3>
-          <span class="cat-tag">Team Event</span>
+          <span class="cat-tag">House / Team Event</span>
         </div>
 
         <div class="schedule-card" data-day="day1">
@@ -585,7 +591,7 @@
       </div>
     </section>
 
-    <!-- Leaderboard / Points Table -->
+    <!-- Team Points Table (Updated with 3 Teams: MA'WA, SALWA, KISWA) -->
     <section id="leaderboard" class="section">
       <div class="section-header">
         <h2><i class="fa-solid fa-trophy"></i> Team Points Table</h2>
@@ -596,43 +602,37 @@
         <table class="styled-table">
           <thead>
             <tr>
-              <th>Rank</th>
-              <th>Team Name</th>
-              <th>Team Code</th>
-              <th>Total Points</th>
+              <th>RANK</th>
+              <th>TEAM NAME</th>
+              <th>TEAM CODE</th>
+              <th>TOTAL POINTS</th>
             </tr>
           </thead>
           <tbody>
             <tr class="rank-1">
               <td><span class="rank-badge">1</span></td>
-              <td class="team-name">Team Badr</td>
-              <td>T-01</td>
+              <td class="team-name">Team MA'WA</td>
+              <td class="team-code-badge">T-01</td>
               <td class="points">145</td>
             </tr>
             <tr class="rank-2">
               <td><span class="rank-badge">2</span></td>
-              <td class="team-name">Team Uhud</td>
-              <td>T-02</td>
+              <td class="team-name">Team SALWA</td>
+              <td class="team-code-badge">T-02</td>
               <td class="points">130</td>
             </tr>
             <tr class="rank-3">
               <td><span class="rank-badge">3</span></td>
-              <td class="team-name">Team Yarmouk</td>
-              <td>T-03</td>
+              <td class="team-name">Team KISWA</td>
+              <td class="team-code-badge">T-03</td>
               <td class="points">115</td>
-            </tr>
-            <tr>
-              <td><span class="rank-badge">4</span></td>
-              <td class="team-name">Team Hunayn</td>
-              <td>T-04</td>
-              <td class="points">98</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Student & Team Directory -->
+    <!-- Student & Team Directory (Updated to MA'WA, SALWA, KISWA) -->
     <section id="teams" class="section">
       <div class="section-header">
         <h2><i class="fa-solid fa-users"></i> Participant & Team Directory</h2>
@@ -651,43 +651,69 @@
       </div>
 
       <div class="students-grid" id="studentsContainer">
+        <!-- Student 1 -->
         <div class="student-card">
           <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="info">
             <h4>Ahmad Razi</h4>
             <p><strong>Chest No:</strong> 101</p>
-            <p><strong>Team:</strong> Team Badr</p>
-            <p><strong>Events:</strong> Qirat, Elocution</p>
+            <p><strong>Team:</strong> MA'WA</p>
+            <p><strong>Events:</strong> Qirat, Elocution (Eng)</p>
           </div>
         </div>
 
+        <!-- Student 2 -->
         <div class="student-card">
           <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="info">
             <h4>Muhammed Bilal</h4>
             <p><strong>Chest No:</strong> 104</p>
-            <p><strong>Team:</strong> Team Uhud</p>
+            <p><strong>Team:</strong> SALWA</p>
             <p><strong>Events:</strong> Islamic Song, Quiz</p>
           </div>
         </div>
 
+        <!-- Student 3 -->
         <div class="student-card">
           <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="info">
             <h4>Salman Faris</h4>
             <p><strong>Chest No:</strong> 109</p>
-            <p><strong>Team:</strong> Team Yarmouk</p>
+            <p><strong>Team:</strong> KISWA</p>
             <p><strong>Events:</strong> Calligraphy, Essay</p>
           </div>
         </div>
 
+        <!-- Student 4 -->
         <div class="student-card">
           <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="info">
             <h4>Umar Mukhtar</h4>
             <p><strong>Chest No:</strong> 115</p>
-            <p><strong>Team:</strong> Team Hunayn</p>
-            <p><strong>Events:</strong> Qirat, Speech</p>
+            <p><strong>Team:</strong> MA'WA</p>
+            <p><strong>Events:</strong> Qirat, Speech (Arabic)</p>
+          </div>
+        </div>
+
+        <!-- Student 5 -->
+        <div class="student-card">
+          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="info">
+            <h4>Zayd Ali</h4>
+            <p><strong>Chest No:</strong> 121</p>
+            <p><strong>Team:</strong> SALWA</p>
+            <p><strong>Events:</strong> Nasheed Group, Quiz</p>
+          </div>
+        </div>
+
+        <!-- Student 6 -->
+        <div class="student-card">
+          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="info">
+            <h4>Hassan Tariq</h4>
+            <p><strong>Chest No:</strong> 130</p>
+            <p><strong>Team:</strong> KISWA</p>
+            <p><strong>Events:</strong> Elocution (Mal)</p>
           </div>
         </div>
       </div>
@@ -734,7 +760,7 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // Schedule Filter (All / Day 1 / Day 2)
+    // Schedule Filter
     function filterSchedule(day, element) {
       const buttons = document.querySelectorAll(".filter-btn");
       buttons.forEach(btn => btn.classList.remove("active"));
@@ -750,7 +776,7 @@
       });
     }
 
-    // Live Participant Search
+    // Live Participant & Team Search
     function searchStudents() {
       const query = document.getElementById("studentSearch").value.toLowerCase().trim();
       const studentCards = document.querySelectorAll(".student-card");
