@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AL MISK FAAH Meelad Fest 2k26</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #064e3b;         /* Islamic Emerald Deep */
+      --primary-light: #059669;   /* Emerald Accent */
+      --primary-dark: #022c22;
+      --gold: #d97706;            /* Warm Amber Gold */
+      --gold-light: #fef3c7;
+      --dark: #0f172a;
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --text-muted: #64748b;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f1f5f9;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* Top Banner / Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 7%;
+      background: var(--primary);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow-md);
+    }
+
+    .navbar .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .navbar .logo span {
+      color: #fbbf24;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fbbf24;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(6, 78, 59, 0.95), rgba(2, 44, 34, 0.9)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80') center/cover;
+      color: white;
+      text-align: center;
+      padding: 5rem 1.5rem;
+      position: relative;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(217, 119, 6, 0.25);
+      border: 1px solid #fbbf24;
+      color: #fef08a;
+      padding: 0.35rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: #fbbf24;
+      display: block;
+      font-size: 2.2rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      margin-bottom: 2.2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Countdown Timer */
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .time-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      min-width: 85px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .time-box span {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fbbf24;
+      display: block;
+      line-height: 1.1;
+    }
+
+    .time-box p {
+      font-size: 0.75rem;
+      color: #e2e8f0;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-top: 0.25rem;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: #b45309;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Container & Sections */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem;
+    }
+
+    .section {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+      color: var(--primary);
+      font-size: 1.85rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 0.3rem;
+    }
+
+    /* Filter Buttons */
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1.4rem;
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* Schedule Grid */
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .schedule-card {
+      border: 1px solid var(--border);
+      padding: 1.35rem;
+      border-radius: 12px;
+      border-left: 5px solid var(--gold);
+      background: #ffffff;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .schedule-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .time-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .schedule-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      color: var(--dark);
+    }
+
+    .cat-tag {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: #f1f5f9;
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Leaderboard Table */
+    .table-container {
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .styled-table th, .styled-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .styled-table th {
+      background-color: #f8fafc;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .rank-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-weight: 800;
+      font-size: 0.9rem;
+      background: #e2e8f0;
+      color: var(--dark);
+    }
+
+    .rank-1 .rank-badge { background: #fef08a; color: #854d0e; box-shadow: 0 0 10px rgba(254, 240, 138, 0.8); }
+    .rank-2 .rank-badge { background: #e2e8f0; color: #334155; }
+    .rank-3 .rank-badge { background: #ffedd5; color: #9a3412; }
+
+    .team-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .points {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 1.25rem;
+    }
+
+    /* Student & Team Directory */
+    .search-container {
+      max-width: 550px;
+      margin: 0 auto 2rem auto;
+      position: relative;
+    }
+
+    .search-container i {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.85rem 1.2rem 0.85rem 3rem;
+      border: 1.5px solid var(--border);
+      border-radius: 50px;
+      outline: none;
+      font-size: 1rem;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
+    }
+
+    .students-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .student-card {
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      border-radius: 12px;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .student-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .avatar {
+      background: var(--gold-light);
+      color: var(--gold);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .student-card .info h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .student-card .info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.15rem;
+      line-height: 1.4;
+    }
+
+    .student-card .info strong {
+      color: var(--dark);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      background: var(--primary-dark);
+      color: #94a3b8;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    footer p {
+      margin-bottom: 0.3rem;
+    }
+
+    footer strong {
+      color: #fbbf24;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero {
+        padding: 3.5rem 1rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero h1 span {
+        font-size: 1.6rem;
+      }
+      .section {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-mosque"></i> AL MISK <span>2k26</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#leaderboard">Leaderboard</a></li>
+      <li><a href="#teams">Students & Teams</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Countdown -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <span class="badge">FAAH Grand Cultural & Arts Fest</span>
+      <h1>AL MISK <span>MEELAD FEST 2k26</span></h1>
+      <p class="tagline">Celebrating Talent, Knowledge, and the Blessed Teachings of the Prophet (PBUH)</p>
+      
+      <!-- Live Countdown Timer -->
+      <div class="countdown-container">
+        <div class="time-box"><span id="days">00</span><p>Days</p></div>
+        <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+        <div class="time-box"><span id="minutes">00</span><p>Minutes</p></div>
+        <div class="time-box"><span id="seconds">00</span><p>Seconds</p></div>
+      </div>
+
+      <div class="btn-group">
+        <a href="#schedule" class="btn-primary"><i class="fa-solid fa-calendar-days"></i> View Schedule</a>
+        <a href="#leaderboard" class="btn-outline"><i class="fa-solid fa-trophy"></i> Live Standings</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-clock"></i> Programme Schedule</h2>
+        <p>Stay updated with stage timings and competitions</p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterSchedule('all', this)">All Events</button>
+        <button class="filter-btn" onclick="filterSchedule('day1', this)">Day 1</button>
+        <button class="filter-btn" onclick="filterSchedule('day2', this)">Day 2</button>
+      </div>
+
+      <div class="schedule-grid" id="scheduleList">
+        <!-- Day 1 Items -->
+        <div class="schedule-card" data-day="day1">
+          <div class="time-tag"><i class="fa-solid fa-clock"></i> 09:00 AM | Stage 1 (Main)</div>
+          <h3>Qur'an Recitation (Qirat)</h3>
+          <span class="cat-tag">Senior & Junior</span>
+        </div>
+
+        <div class="schedule-card" data-day="day1">
+          <div class="time-tag"><i class="fa-solid fa-clock"></i> 11:30 AM | Stage 2</div>
+          <h3>Islamic Quiz Prelims</h3>
+          <span class="cat-tag">House / Team Event</span>
+        </div>
+
+        <div class="schedule-card" data-day="day1">
+          <div class="time-tag"><i class="fa-solid fa-clock"></i> 02:30 PM | Auditorium</div>
+          <h3>Malayalam & English Elocution</h3>
+          <span class="cat-tag">All Categories</span>
+        </div>
+
+        <!-- Day 2 Items -->
+        <div class="schedule-card" data-day="day2">
+          <div class="time-tag"><i class="fa-solid fa-clock"></i> 09:30 AM | Main Stage</div>
+          <h3>Mawlid / Nasheed Group Song</h3>
+          <span class="cat-tag">Group Competition</span>
+        </div>
+
+        <div class="schedule-card" data-day="day2">
+          <div class="time-tag"><i class="fa-solid fa-clock"></i> 02:00 PM | Hall A</div>
+          <h3>Arabic Calligraphy & Essay Writing</h3>
+          <span class="cat-tag">Off-Stage</span>
+        </div>
+
+        <div class="schedule-card" data-day="day2">
+          <div class="time-tag"><i class="fa-solid fa-clock"></i> 07:00 PM | Grand Stage</div>
+          <h3>Grand Closing Ceremony & Prize Distribution</h3>
+          <span class="cat-tag">General Session</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leaderboard / Points Table -->
+    <section id="leaderboard" class="section">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-trophy"></i> Team Points Table</h2>
+        <p>Live rankings and score tally across all stages</p>
+      </div>
+
+      <div class="table-container">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Team Name</th>
+              <th>Team Code</th>
+              <th>Total Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="rank-1">
+              <td><span class="rank-badge">1</span></td>
+              <td class="team-name">Team Badr</td>
+              <td>T-01</td>
+              <td class="points">145</td>
+            </tr>
+            <tr class="rank-2">
+              <td><span class="rank-badge">2</span></td>
+              <td class="team-name">Team Uhud</td>
+              <td>T-02</td>
+              <td class="points">130</td>
+            </tr>
+            <tr class="rank-3">
+              <td><span class="rank-badge">3</span></td>
+              <td class="team-name">Team Yarmouk</td>
+              <td>T-03</td>
+              <td class="points">115</td>
+            </tr>
+            <tr>
+              <td><span class="rank-badge">4</span></td>
+              <td class="team-name">Team Hunayn</td>
+              <td>T-04</td>
+              <td class="points">98</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Student & Team Directory -->
+    <section id="teams" class="section">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-users"></i> Participant & Team Directory</h2>
+        <p>Instantly search participants, chest numbers, and registered items</p>
+      </div>
+
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input 
+          type="text" 
+          id="studentSearch" 
+          class="search-input" 
+          placeholder="Search by student name, chest no, team, or event..." 
+          onkeyup="searchStudents()"
+        >
+      </div>
+
+      <div class="students-grid" id="studentsContainer">
+        <!-- Student 1 -->
+        <div class="student-card">
+          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="info">
+            <h4>Ahmad Razi</h4>
+            <p><strong>Chest No:</strong> 101</p>
+            <p><strong>Team:</strong> Team Badr</p>
+            <p><strong>Events:</strong> Qirat, Elocution (Eng)</p>
+          </div>
+        </div>
+
+        <!-- Student 2 -->
+        <div class="student-card">
+          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="info">
+            <h4>Muhammed Bilal</h4>
+            <p><strong>Chest No:</strong> 104</p>
+            <p><strong>Team:</strong> Team Uhud</p>
+            <p><strong>Events:</strong> Islamic Song, Quiz</p>
+          </div>
+        </div>
+
+        <!-- Student 3 -->
+        <div class="student-card">
+          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="info">
+            <h4>Salman Faris</h4>
+            <p><strong>Chest No:</strong> 109</p>
+            <p><strong>Team:</strong> Team Yarmouk</p>
+            <p><strong>Events:</strong> Calligraphy, Essay</p>
+          </div>
+        </div>
+
+        <!-- Student 4 -->
+        <div class="student-card">
+          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="info">
+            <h4>Umar Mukhtar</h4>
+            <p><strong>Chest No:</strong> 115</p>
+            <p><strong>Team:</strong> Team Hunayn</p>
+            <p><strong>Events:</strong> Qirat, Speech (Arabic)</p>
+          </div>
+        </div>
+
+        <!-- Student 5 -->
+        <div class="student-card">
+          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="info">
+            <h4>Zayd Ali</h4>
+            <p><strong>Chest No:</strong> 121</p>
+            <p><strong>Team:</strong> Team Badr</p>
+            <p><strong>Events:</strong> Nasheed Group, Quiz</p>
+          </div>
+        </div>
+
+        <!-- Student 6 -->
+        <div class="student-card">
+          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="info">
+            <h4>Hassan Tariq</h4>
+            <p><strong>Chest No:</strong> 130</p>
+            <p><strong>Team:</strong> Team Uhud</p>
+            <p><strong>Events:</strong> Elocution (Mal)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 <strong>AL MISK FAAH Meelad Fest</strong>. All Rights Reserved.</p>
+    <p>Organized by FAAH Students Union</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // 1. Live Countdown Timer
+    // Adjust target date below (Year, Month index starting from 0, Day, Hour, Min)
+    const festTargetDate = new Date("September 15, 2026 09:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = festTargetDate - now;
+
+      if (difference <= 0) {
+        document.querySelector(".countdown-container").innerHTML = "<h3 style='color:#fbbf24;'>🎉 The Fest is Live Now! 🎉</h3>";
+        return;
+      }
+
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+
+      const days = Math.floor(difference / day);
+      const hours = Math.floor((difference % day) / hour);
+      const minutes = Math.floor((difference % hour) / minute);
+      const seconds = Math.floor((difference % minute) / second);
+
+      document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+      document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+      document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 2. Interactive Schedule Filter
+    function filterSchedule(day, element) {
+      const buttons = document.querySelectorAll(".filter-btn");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      element.classList.add("active");
+
+      const cards = document.querySelectorAll(".schedule-card");
+      cards.forEach(card => {
+        if (day === 'all' || card.getAttribute("data-day") === day) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    // 3. Real-Time Student & Team Search
+    function searchStudents() {
+      const query = document.getElementById("studentSearch").value.toLowerCase().trim();
+      const studentCards = document.querySelectorAll(".student-card");
+
+      studentCards.forEach(card => {
+        const content = card.innerText.toLowerCase();
+        if (content.includes(query)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
