@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AL MISK FAAH Meelad Fest 2k26</title>
-  <!-- Google Fonts & Font Awesome Icons -->
+  
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
-      --primary: #064e3b;         /* Islamic Emerald Deep */
-      --primary-light: #059669;   /* Emerald Accent */
+      --primary: #064e3b;         /* Islamic Deep Emerald */
+      --primary-light: #059669;
       --primary-dark: #022c22;
-      --gold: #d97706;            /* Warm Amber Gold */
+      --gold: #d97706;            /* Accent Gold */
       --gold-light: #fef3c7;
       --dark: #0f172a;
       --light-bg: #f8fafc;
@@ -24,7 +25,6 @@
       --text-muted: #64748b;
       --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
       --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     }
 
     * {
@@ -41,13 +41,14 @@
       line-height: 1.6;
     }
 
-    /* Top Banner / Navbar */
+    /* Navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 7%;
-      background: var(--primary);
+      padding: 1.1rem 7%;
+      background: rgba(6, 78, 59, 0.98);
+      backdrop-filter: blur(10px);
       color: white;
       position: sticky;
       top: 0;
@@ -56,12 +57,12 @@
     }
 
     .navbar .logo {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 800;
-      letter-spacing: 0.5px;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
+      letter-spacing: 0.5px;
     }
 
     .navbar .logo span {
@@ -71,7 +72,7 @@
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 1.75rem;
     }
 
     .nav-links a {
@@ -86,12 +87,16 @@
       color: #fbbf24;
     }
 
-    /* Hero Section */
+    /* Hero Section with Madinah Islamic Background */
     .hero {
-      background: linear-gradient(135deg, rgba(6, 78, 59, 0.95), rgba(2, 44, 34, 0.9)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80') center/cover;
+      background: linear-gradient(
+          rgba(6, 78, 59, 0.88), 
+          rgba(2, 44, 34, 0.92)
+        ), 
+        url('https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 5rem 1.5rem;
+      padding: 5.5rem 1.5rem;
       position: relative;
     }
 
@@ -100,7 +105,7 @@
       background: rgba(217, 119, 6, 0.25);
       border: 1px solid #fbbf24;
       color: #fef08a;
-      padding: 0.35rem 1.2rem;
+      padding: 0.35rem 1.3rem;
       border-radius: 50px;
       font-size: 0.85rem;
       font-weight: 700;
@@ -110,47 +115,50 @@
     }
 
     .hero h1 {
-      font-size: 2.75rem;
+      font-size: 3rem;
       font-weight: 800;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
       letter-spacing: -0.5px;
     }
 
-    .hero h1 span {
-      color: #fbbf24;
-      display: block;
+    .hero h2 {
       font-size: 2.2rem;
+      font-weight: 800;
+      color: #fbbf24;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
     }
 
     .hero .tagline {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: #cbd5e1;
-      margin-bottom: 2.2rem;
-      max-width: 600px;
+      margin-bottom: 2.5rem;
+      max-width: 620px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    /* Countdown Timer */
+    /* Countdown Timer Cards */
     .countdown-container {
       display: flex;
       justify-content: center;
-      gap: 1.25rem;
+      gap: 1.2rem;
       margin-bottom: 2.5rem;
       flex-wrap: wrap;
     }
 
     .time-box {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(8px);
-      padding: 1rem 1.25rem;
-      border-radius: 12px;
-      min-width: 85px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 1.1rem 1.4rem;
+      border-radius: 14px;
+      min-width: 90px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .time-box span {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 800;
       color: #fbbf24;
       display: block;
@@ -161,11 +169,12 @@
       font-size: 0.75rem;
       color: #e2e8f0;
       text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-top: 0.25rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      margin-top: 0.35rem;
     }
 
+    /* Action Buttons */
     .btn-group {
       display: flex;
       justify-content: center;
@@ -174,18 +183,18 @@
     }
 
     .btn-primary {
-      background: var(--gold);
+      background: #d97706;
       color: white;
-      padding: 0.8rem 1.8rem;
+      padding: 0.85rem 2rem;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.95rem;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
       transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.45);
     }
 
     .btn-primary:hover {
@@ -195,16 +204,16 @@
 
     .btn-outline {
       background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.35);
       color: white;
-      padding: 0.8rem 1.8rem;
+      padding: 0.85rem 2rem;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.95rem;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
       transition: all 0.2s ease;
     }
 
@@ -212,7 +221,7 @@
       background: rgba(255, 255, 255, 0.2);
     }
 
-    /* Main Container & Sections */
+    /* Container and Section Styles */
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -245,7 +254,7 @@
 
     .section-header p {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 0.95rem;
       margin-top: 0.3rem;
     }
 
@@ -255,7 +264,6 @@
       justify-content: center;
       gap: 0.75rem;
       margin-bottom: 2rem;
-      flex-wrap: wrap;
     }
 
     .filter-btn {
@@ -276,7 +284,7 @@
       border-color: var(--primary);
     }
 
-    /* Schedule Grid */
+    /* Schedule Cards */
     .schedule-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -311,7 +319,6 @@
       font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 0.35rem;
-      color: var(--dark);
     }
 
     .cat-tag {
@@ -361,17 +368,15 @@
       font-weight: 800;
       font-size: 0.9rem;
       background: #e2e8f0;
-      color: var(--dark);
     }
 
-    .rank-1 .rank-badge { background: #fef08a; color: #854d0e; box-shadow: 0 0 10px rgba(254, 240, 138, 0.8); }
+    .rank-1 .rank-badge { background: #fef08a; color: #854d0e; }
     .rank-2 .rank-badge { background: #e2e8f0; color: #334155; }
     .rank-3 .rank-badge { background: #ffedd5; color: #9a3412; }
 
     .team-name {
       font-size: 1.05rem;
       font-weight: 700;
-      color: var(--dark);
     }
 
     .points {
@@ -403,7 +408,6 @@
       border-radius: 50px;
       outline: none;
       font-size: 1rem;
-      background: #fff;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
 
@@ -451,7 +455,6 @@
     .student-card .info h4 {
       font-size: 1.05rem;
       font-weight: 700;
-      color: var(--dark);
       margin-bottom: 0.25rem;
     }
 
@@ -459,11 +462,6 @@
       font-size: 0.85rem;
       color: var(--text-muted);
       margin-bottom: 0.15rem;
-      line-height: 1.4;
-    }
-
-    .student-card .info strong {
-      color: var(--dark);
     }
 
     /* Footer */
@@ -476,46 +474,30 @@
       border-top: 1px solid rgba(255,255,255,0.05);
     }
 
-    footer p {
-      margin-bottom: 0.3rem;
-    }
-
     footer strong {
       color: #fbbf24;
     }
 
-    /* Mobile Responsiveness */
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
         gap: 0.75rem;
       }
-      .nav-links {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .hero {
-        padding: 3.5rem 1rem;
-      }
       .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
-      .hero h1 span {
-        font-size: 1.6rem;
-      }
-      .section {
-        padding: 1.75rem 1.25rem;
+      .hero h2 {
+        font-size: 1.7rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="logo">
-      <i class="fa-solid fa-mosque"></i> AL MISK <span>2k26</span>
+      <i class="fa-solid fa-mosque"></i> AL MISK FAAH <span>2k26</span>
     </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
@@ -525,19 +507,20 @@
     </ul>
   </nav>
 
-  <!-- Hero Section with Countdown -->
+  <!-- Hero Header with Madinah Background -->
   <header id="home" class="hero">
     <div class="hero-content">
       <span class="badge">FAAH Grand Cultural & Arts Fest</span>
-      <h1>AL MISK <span>MEELAD FEST 2k26</span></h1>
+      <h1>AL MISK FAAH</h1>
+      <h2>MEELAD FEST 2k26</h2>
       <p class="tagline">Celebrating Talent, Knowledge, and the Blessed Teachings of the Prophet (PBUH)</p>
       
-      <!-- Live Countdown Timer -->
+      <!-- Live Countdown -->
       <div class="countdown-container">
-        <div class="time-box"><span id="days">00</span><p>Days</p></div>
-        <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
-        <div class="time-box"><span id="minutes">00</span><p>Minutes</p></div>
-        <div class="time-box"><span id="seconds">00</span><p>Seconds</p></div>
+        <div class="time-box"><span id="days">30</span><p>Days</p></div>
+        <div class="time-box"><span id="hours">21</span><p>Hours</p></div>
+        <div class="time-box"><span id="minutes">17</span><p>Minutes</p></div>
+        <div class="time-box"><span id="seconds">19</span><p>Seconds</p></div>
       </div>
 
       <div class="btn-group">
@@ -564,7 +547,6 @@
       </div>
 
       <div class="schedule-grid" id="scheduleList">
-        <!-- Day 1 Items -->
         <div class="schedule-card" data-day="day1">
           <div class="time-tag"><i class="fa-solid fa-clock"></i> 09:00 AM | Stage 1 (Main)</div>
           <h3>Qur'an Recitation (Qirat)</h3>
@@ -574,7 +556,7 @@
         <div class="schedule-card" data-day="day1">
           <div class="time-tag"><i class="fa-solid fa-clock"></i> 11:30 AM | Stage 2</div>
           <h3>Islamic Quiz Prelims</h3>
-          <span class="cat-tag">House / Team Event</span>
+          <span class="cat-tag">Team Event</span>
         </div>
 
         <div class="schedule-card" data-day="day1">
@@ -583,11 +565,10 @@
           <span class="cat-tag">All Categories</span>
         </div>
 
-        <!-- Day 2 Items -->
         <div class="schedule-card" data-day="day2">
           <div class="time-tag"><i class="fa-solid fa-clock"></i> 09:30 AM | Main Stage</div>
           <h3>Mawlid / Nasheed Group Song</h3>
-          <span class="cat-tag">Group Competition</span>
+          <span class="cat-tag">Team Competition</span>
         </div>
 
         <div class="schedule-card" data-day="day2">
@@ -655,7 +636,7 @@
     <section id="teams" class="section">
       <div class="section-header">
         <h2><i class="fa-solid fa-users"></i> Participant & Team Directory</h2>
-        <p>Instantly search participants, chest numbers, and registered items</p>
+        <p>Search participants, chest numbers, and registered items</p>
       </div>
 
       <div class="search-container">
@@ -670,18 +651,16 @@
       </div>
 
       <div class="students-grid" id="studentsContainer">
-        <!-- Student 1 -->
         <div class="student-card">
           <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="info">
             <h4>Ahmad Razi</h4>
             <p><strong>Chest No:</strong> 101</p>
             <p><strong>Team:</strong> Team Badr</p>
-            <p><strong>Events:</strong> Qirat, Elocution (Eng)</p>
+            <p><strong>Events:</strong> Qirat, Elocution</p>
           </div>
         </div>
 
-        <!-- Student 2 -->
         <div class="student-card">
           <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="info">
@@ -692,7 +671,6 @@
           </div>
         </div>
 
-        <!-- Student 3 -->
         <div class="student-card">
           <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="info">
@@ -703,36 +681,13 @@
           </div>
         </div>
 
-        <!-- Student 4 -->
         <div class="student-card">
           <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
           <div class="info">
             <h4>Umar Mukhtar</h4>
             <p><strong>Chest No:</strong> 115</p>
             <p><strong>Team:</strong> Team Hunayn</p>
-            <p><strong>Events:</strong> Qirat, Speech (Arabic)</p>
-          </div>
-        </div>
-
-        <!-- Student 5 -->
-        <div class="student-card">
-          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
-          <div class="info">
-            <h4>Zayd Ali</h4>
-            <p><strong>Chest No:</strong> 121</p>
-            <p><strong>Team:</strong> Team Badr</p>
-            <p><strong>Events:</strong> Nasheed Group, Quiz</p>
-          </div>
-        </div>
-
-        <!-- Student 6 -->
-        <div class="student-card">
-          <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
-          <div class="info">
-            <h4>Hassan Tariq</h4>
-            <p><strong>Chest No:</strong> 130</p>
-            <p><strong>Team:</strong> Team Uhud</p>
-            <p><strong>Events:</strong> Elocution (Mal)</p>
+            <p><strong>Events:</strong> Qirat, Speech</p>
           </div>
         </div>
       </div>
@@ -748,8 +703,7 @@
 
   <!-- JavaScript -->
   <script>
-    // 1. Live Countdown Timer
-    // Adjust target date below (Year, Month index starting from 0, Day, Hour, Min)
+    // Live Countdown Timer
     const festTargetDate = new Date("September 15, 2026 09:00:00").getTime();
 
     function updateCountdown() {
@@ -780,7 +734,7 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // 2. Interactive Schedule Filter
+    // Schedule Filter (All / Day 1 / Day 2)
     function filterSchedule(day, element) {
       const buttons = document.querySelectorAll(".filter-btn");
       buttons.forEach(btn => btn.classList.remove("active"));
@@ -796,7 +750,7 @@
       });
     }
 
-    // 3. Real-Time Student & Team Search
+    // Live Participant Search
     function searchStudents() {
       const query = document.getElementById("studentSearch").value.toLowerCase().trim();
       const studentCards = document.querySelectorAll(".student-card");
